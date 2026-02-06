@@ -6,11 +6,23 @@ using Photon.Pun;
 using Photon.Realtime;
 
 namespace BEKStudio{
+
+    public enum MatchMode
+    {
+        Quick,
+        Friend
+    }
+
+
     public class PhotonController : MonoBehaviourPunCallbacks {
         public static PhotonController Instance;
         public int roomEntryPice = 0;
         public int botAvatar;
         public string botName;
+
+        //Enum for match mode
+        public MatchMode currentMode;
+        public const int QUICK_MATCH_PLAYERS = 4;
 
 
         void Awake() {

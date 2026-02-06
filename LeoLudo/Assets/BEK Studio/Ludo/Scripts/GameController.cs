@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-namespace BEKStudio {
+namespace BEKStudio
+{
     public class GameController : MonoBehaviour
     {
         public static GameController Instance;
@@ -49,6 +50,8 @@ namespace BEKStudio {
         string winnerColor;
 
         List<string> finishOrder = new List<string>(); //New Add 31-1-2026
+        private bool mustKillToWin;
+        private int requiredHomePawns;
 
         void Awake()
         {
@@ -56,6 +59,35 @@ namespace BEKStudio {
             {
                 Instance = this;
             }
+        }
+
+        void Start()
+        {
+            if (PhotonController.Instance.gameMode() == "quick")
+            {
+                SetupQuickMatch();
+            }
+        }
+
+        private void SetupQuickMatch()
+        {
+            /// 1.Start with 2 pawns already out
+            foreach (PawnController pController in activePawnControllers)
+            {
+                //Keep 2 pawn outside
+                for (int i = 0; i < 2; i++)
+                {
+                    Pawn pawn = pController.pawns[i];
+                    pawn.inBase = false;
+                    pawn.isProtected = true;
+                    pawn.currentWayID = pawn.firstWayID;
+                    pawn.transform.position = waypointParent.GetChild(pawn.currentWayID).position;
+                }
+            }
+
+            // 2. Enable quick rules
+            mustKillToWin = true;
+            requiredHomePawns = 1;
         }
 
         void OnEnable()
@@ -70,23 +102,23 @@ namespace BEKStudio {
             myPawns = greenPawns;
             activePawnControllers = new List<PawnController>();
 
-          // Isme Direct Sab me coin Cut ho rahe the 
-           /* PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - PhotonController.Instance.gameEntryPrice());
-            PlayerPrefs.Save();*/
+            // Isme Direct Sab me coin Cut ho rahe the 
+            /* PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") - PhotonController.Instance.gameEntryPrice());
+             PlayerPrefs.Save();*/
 
-//  Ke Liye Dala He Idhar (just before coin cut check)
+            //  Ke Liye Dala He Idhar (just before coin cut check)
 
-    Debug.Log("IsPractice flag = " + PlayerPrefs.GetInt("IsPractice", 0));
-    if (PlayerPrefs.GetInt("IsPractice", 0) == 0)
-{
-    PlayerPrefs.SetInt(
-        "coin",
-        PlayerPrefs.GetInt("coin") - PhotonController.Instance.gameEntryPrice()
-    );
-    PlayerPrefs.Save();
-}
+            Debug.Log("IsPractice flag = " + PlayerPrefs.GetInt("IsPractice", 0));
+            if (PlayerPrefs.GetInt("IsPractice", 0) == 0)
+            {
+                PlayerPrefs.SetInt(
+                    "coin",
+                    PlayerPrefs.GetInt("coin") - PhotonController.Instance.gameEntryPrice()
+                );
+                PlayerPrefs.Save();
+            }
 
-//upper vale me practice mode me coin cut nhi hoga kyu ki flag laga diya he 
+            //upper vale me practice mode me coin cut nhi hoga kyu ki flag laga diya he 
 
 
             DisableNotActivePawns();
@@ -96,67 +128,67 @@ namespace BEKStudio {
 
         }
 
-       /* void Update()
+        /* void Update()
+         {
+             if (gameState != GameState.MOVE || gameState == GameState.WAIT) return;
+
+             if (Input.GetMouseButtonDown(0) && (currentPawnController == myPawnController || (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)))
+             {
+                 hit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                 if (hit2D.collider != null)
+                 {
+                     Debug.Log("hit pawn now check color");
+                     if (hit2D.collider.tag == "Pawn" && (hit2D.collider.name.StartsWith(myPlayerColor) || (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)))
+                     {
+                         if (hit2D.collider.GetComponent<Pawn>().inBase && currentDice != 5) return;
+
+                         if (hit2D.collider.GetComponent<Pawn>().moveCount + (currentDice + 1) > 56) return;
+
+                         myPawnController.HighlightDices(false);
+                         gameState = GameState.MOVING;
+                         selectedPawn = hit2D.collider.GetComponent<Pawn>();
+                         hit2D.collider.GetComponent<Pawn>().Move(currentDice + 1);
+                     }
+                 }
+             }
+         }
+ */
+
+        // YE New Wala HE - 31-1-2026 Game ke Pawn controll karne ke liye
+
+        void Update()
         {
             if (gameState != GameState.MOVE || gameState == GameState.WAIT) return;
 
-            if (Input.GetMouseButtonDown(0) && (currentPawnController == myPawnController || (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)))
+            if (Input.GetMouseButtonDown(0))
             {
+                // Sirf current player hi click se move kar sakta hai
+                if (currentPawnController != myPawnController && PlayerPrefs.GetInt("IsOfflineMultiplayer") != 1)
+                    return;
+
                 hit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
                 if (hit2D.collider != null)
                 {
-                    Debug.Log("hit pawn now check color");
-                    if (hit2D.collider.tag == "Pawn" && (hit2D.collider.name.StartsWith(myPlayerColor) || (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)))
+                    if (hit2D.collider.tag == "Pawn")
                     {
-                        if (hit2D.collider.GetComponent<Pawn>().inBase && currentDice != 5) return;
+                        Pawn clickedPawn = hit2D.collider.GetComponent<Pawn>();
 
-                        if (hit2D.collider.GetComponent<Pawn>().moveCount + (currentDice + 1) > 56) return;
+                        //  Sirf currentPawnController ki pawn allow
+                        if (clickedPawn == null || clickedPawn.pawnController != currentPawnController)
+                            return;
 
-                        myPawnController.HighlightDices(false);
+                        if (clickedPawn.inBase && currentDice != 5) return;
+                        if (clickedPawn.moveCount + (currentDice + 1) > 56) return;
+
+                        currentPawnController.HighlightDices(false);
                         gameState = GameState.MOVING;
-                        selectedPawn = hit2D.collider.GetComponent<Pawn>();
-                        hit2D.collider.GetComponent<Pawn>().Move(currentDice + 1);
+                        selectedPawn = clickedPawn;
+                        clickedPawn.Move(currentDice + 1);
                     }
                 }
             }
         }
-*/
-
-// YE New Wala HE - 31-1-2026 Game ke Pawn controll karne ke liye
-
-void Update()
-{
-    if (gameState != GameState.MOVE || gameState == GameState.WAIT) return;
-
-    if (Input.GetMouseButtonDown(0))
-    {
-        // Sirf current player hi click se move kar sakta hai
-        if (currentPawnController != myPawnController && PlayerPrefs.GetInt("IsOfflineMultiplayer") != 1)
-            return;
-
-        hit2D = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-        if (hit2D.collider != null)
-        {
-            if (hit2D.collider.tag == "Pawn")
-            {
-                Pawn clickedPawn = hit2D.collider.GetComponent<Pawn>();
-
-                //  Sirf currentPawnController ki pawn allow
-                if (clickedPawn == null || clickedPawn.pawnController != currentPawnController)
-                    return;
-
-                if (clickedPawn.inBase && currentDice != 5) return;
-                if (clickedPawn.moveCount + (currentDice + 1) > 56) return;
-
-                currentPawnController.HighlightDices(false);
-                gameState = GameState.MOVING;
-                selectedPawn = clickedPawn;
-                clickedPawn.Move(currentDice + 1);
-            }
-        }
-    }
-}
 
 
 
@@ -281,13 +313,13 @@ void Update()
                     }
                 }
             }
-//Ye Flag Ka He 4-1-2026
+            //Ye Flag Ka He 4-1-2026
             Debug.Log("DisablePawns:" + PlayerPrefs.GetInt("IsOfflineMultiplayer"));
-          /*  if (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)
-            {
-                disabledColors.Clear();
-            }
-*/
+            /*  if (PlayerPrefs.GetInt("IsOfflineMultiplayer") == 1)
+              {
+                  disabledColors.Clear();
+              }
+  */
 
             for (int i = 0; i < disabledColors.Count; i++)
             {
@@ -444,7 +476,7 @@ void Update()
             return null;
         }
 
-      
+
 
         public void ChangeGameState(GameState newState)
         {
@@ -460,10 +492,10 @@ void Update()
 
 
                 // XP SYSTEM
-              //  XPSystem xp = FindObjectOfType<XPSystem>();
-              XPSystem xp = FindFirstObjectByType<XPSystem>();
+                //  XPSystem xp = FindObjectOfType<XPSystem>();
+                XPSystem xp = FindFirstObjectByType<XPSystem>();
 
-                
+
 
 
 
@@ -613,7 +645,7 @@ void Update()
             }
         }
 
-      
+
 
         public void CheckForFinish(string color = "")
         {
@@ -722,7 +754,7 @@ void Update()
                 currentPawnController.PlayDiceAnimation();
                 LeanTween.value(0, 1, 0.5f).setOnComplete(() =>
                 {
-                    currentPawnController.CheckAvailableMovements(currentDice == 5);                 
+                    currentPawnController.CheckAvailableMovements(currentDice == 5);
 
                 });
             }
@@ -741,7 +773,7 @@ void Update()
             if (photonView.IsMine)
             {
                 currentPawnController.CheckAvailableMovements(currentDice == 5);
-               
+
 
             }
         }
@@ -792,132 +824,132 @@ void Update()
             }
         }
 
-     // Me Thod  animation me KAmm Kiya tha
-public void FinishedShow()
-{
-    if (pauseScreen.activeInHierarchy)
-    {
-        pauseScreen.SetActive(false);
-    }
-
-    List<GameObject> activePlayerForPanel = new List<GameObject>();
-    PhotonNetwork.AutomaticallySyncScene = false;
-
-    finishedPanel.transform.localScale = Vector3.zero;
-    finishedScreen.SetActive(true);
-
-    GameObject winnerObject = null;
-
-    foreach (PawnController p in activePawnControllers)
-    {
-        if (p.pawnColor == "Green")
+        // Me Thod  animation me KAmm Kiya tha
+        public void FinishedShow()
         {
-            activePlayerForPanel.Add(finishedPlayersParent.GetChild(0).gameObject);
-            finishedPlayersParent.GetChild(0).gameObject.SetActive(true);
-            finishedPlayersParent.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = greenPawn.usernameText.text;
-            finishedPlayersParent.GetChild(0).GetChild(0).GetComponent<Image>().sprite = greenPawn.avatarImg.sprite;
-
-            if (winnerColor == p.pawnColor)
+            if (pauseScreen.activeInHierarchy)
             {
-                winnerObject = finishedPlayersParent.GetChild(0).gameObject;
-                LeanTween.scale(finishedPlayersParent.GetChild(0).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                pauseScreen.SetActive(false);
             }
-        }
-        else if (p.pawnColor == "Yellow")
-        {
-            activePlayerForPanel.Add(finishedPlayersParent.GetChild(2).gameObject);
-            finishedPlayersParent.GetChild(2).gameObject.SetActive(true);
-            finishedPlayersParent.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = yellowPawn.usernameText.text;
-            finishedPlayersParent.GetChild(2).GetChild(0).GetComponent<Image>().sprite = yellowPawn.avatarImg.sprite;
 
-            if (winnerColor == p.pawnColor)
+            List<GameObject> activePlayerForPanel = new List<GameObject>();
+            PhotonNetwork.AutomaticallySyncScene = false;
+
+            finishedPanel.transform.localScale = Vector3.zero;
+            finishedScreen.SetActive(true);
+
+            GameObject winnerObject = null;
+
+            foreach (PawnController p in activePawnControllers)
             {
-                winnerObject = finishedPlayersParent.GetChild(2).gameObject;
-                LeanTween.scale(finishedPlayersParent.GetChild(2).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                if (p.pawnColor == "Green")
+                {
+                    activePlayerForPanel.Add(finishedPlayersParent.GetChild(0).gameObject);
+                    finishedPlayersParent.GetChild(0).gameObject.SetActive(true);
+                    finishedPlayersParent.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = greenPawn.usernameText.text;
+                    finishedPlayersParent.GetChild(0).GetChild(0).GetComponent<Image>().sprite = greenPawn.avatarImg.sprite;
+
+                    if (winnerColor == p.pawnColor)
+                    {
+                        winnerObject = finishedPlayersParent.GetChild(0).gameObject;
+                        LeanTween.scale(finishedPlayersParent.GetChild(0).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                    }
+                }
+                else if (p.pawnColor == "Yellow")
+                {
+                    activePlayerForPanel.Add(finishedPlayersParent.GetChild(2).gameObject);
+                    finishedPlayersParent.GetChild(2).gameObject.SetActive(true);
+                    finishedPlayersParent.GetChild(2).GetChild(1).GetComponent<TextMeshProUGUI>().text = yellowPawn.usernameText.text;
+                    finishedPlayersParent.GetChild(2).GetChild(0).GetComponent<Image>().sprite = yellowPawn.avatarImg.sprite;
+
+                    if (winnerColor == p.pawnColor)
+                    {
+                        winnerObject = finishedPlayersParent.GetChild(2).gameObject;
+                        LeanTween.scale(finishedPlayersParent.GetChild(2).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                    }
+                }
+                else if (p.pawnColor == "Blue")
+                {
+                    activePlayerForPanel.Add(finishedPlayersParent.GetChild(1).gameObject);
+                    finishedPlayersParent.GetChild(1).gameObject.SetActive(true);
+                    finishedPlayersParent.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = bluePawn.usernameText.text;
+                    finishedPlayersParent.GetChild(1).GetChild(0).GetComponent<Image>().sprite = bluePawn.avatarImg.sprite;
+
+                    if (winnerColor == p.pawnColor)
+                    {
+                        winnerObject = finishedPlayersParent.GetChild(1).gameObject;
+                        LeanTween.scale(finishedPlayersParent.GetChild(1).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                    }
+                }
+                else if (p.pawnColor == "Red")
+                {
+                    activePlayerForPanel.Add(finishedPlayersParent.GetChild(3).gameObject);
+                    finishedPlayersParent.GetChild(3).gameObject.SetActive(true);
+                    finishedPlayersParent.GetChild(3).GetChild(1).GetComponent<TextMeshProUGUI>().text = redPawn.usernameText.text;
+                    finishedPlayersParent.GetChild(3).GetChild(0).GetComponent<Image>().sprite = redPawn.avatarImg.sprite;
+
+                    if (winnerColor == p.pawnColor)
+                    {
+                        winnerObject = finishedPlayersParent.GetChild(3).gameObject;
+                        LeanTween.scale(finishedPlayersParent.GetChild(3).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
+                    }
+                }
             }
-        }
-        else if (p.pawnColor == "Blue")
-        {
-            activePlayerForPanel.Add(finishedPlayersParent.GetChild(1).gameObject);
-            finishedPlayersParent.GetChild(1).gameObject.SetActive(true);
-            finishedPlayersParent.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = bluePawn.usernameText.text;
-            finishedPlayersParent.GetChild(1).GetChild(0).GetComponent<Image>().sprite = bluePawn.avatarImg.sprite;
-
-            if (winnerColor == p.pawnColor)
+            // ANIMATION Yaha se  - Pehle Jo Chipak raaha tha uska 
+            LeanTween.scale(finishedPanel, Vector3.one, 0.2f).setEaseOutBack().setOnStart(() =>
             {
-                winnerObject = finishedPlayersParent.GetChild(1).gameObject;
-                LeanTween.scale(finishedPlayersParent.GetChild(1).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
-            }
-        }
-        else if (p.pawnColor == "Red")
-        {
-            activePlayerForPanel.Add(finishedPlayersParent.GetChild(3).gameObject);
-            finishedPlayersParent.GetChild(3).gameObject.SetActive(true);
-            finishedPlayersParent.GetChild(3).GetChild(1).GetComponent<TextMeshProUGUI>().text = redPawn.usernameText.text;
-            finishedPlayersParent.GetChild(3).GetChild(0).GetComponent<Image>().sprite = redPawn.avatarImg.sprite;
-
-            if (winnerColor == p.pawnColor)
-            {
-                winnerObject = finishedPlayersParent.GetChild(3).gameObject;
-                LeanTween.scale(finishedPlayersParent.GetChild(3).gameObject, new Vector3(1.05f, 1.05f, 1.05f), 0.3f).setLoopPingPong();
-            }
-        }
-    }
-// ANIMATION Yaha se  - Pehle Jo Chipak raaha tha uska 
-    LeanTween.scale(finishedPanel, Vector3.one, 0.2f).setEaseOutBack().setOnStart(() =>
-    {
-        for (int i = 0; i < activePlayerForPanel.Count; i++)
-        {
-            GameObject g = activePlayerForPanel[i];
-            LeanTween.alphaCanvas(g.GetComponent<CanvasGroup>(), 1, 0.5f).setDelay(i * 0.25f);
-        }
-    });
-
-    int gamePrice = PhotonController.Instance.gameEntryPrice();
-
-    //  Practice me UI + reward = 0
-    if (PlayerPrefs.GetInt("IsPractice", 0) == 1)
-    {
-        gamePrice = 0;
-    }
-    else
-    {
-        //  Normal match me reward do
-        int winnerPrice = PlayerPrefs.GetInt("playerCount") * gamePrice;
-
-        if (winnerColor == myPlayerColor)
-        {
-            PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + winnerPrice);
-            PlayerPrefs.Save();
-        }
-    }
-
-    for (int i = 0; i < activePlayerForPanel.Count; i++)
-    {
-        GameObject g = activePlayerForPanel[i];
-        Transform txt = g.transform.Find("Coin");
-
-        txt.GetComponent<TextMeshProUGUI>().text = gamePrice.ToString("###,###,###");
-
-        if (g == winnerObject)
-        {
-            LeanTween.value(gamePrice, PlayerPrefs.GetInt("playerCount") * gamePrice, 2f).setOnUpdate((float var) =>
-            {
-                txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
+                for (int i = 0; i < activePlayerForPanel.Count; i++)
+                {
+                    GameObject g = activePlayerForPanel[i];
+                    LeanTween.alphaCanvas(g.GetComponent<CanvasGroup>(), 1, 0.5f).setDelay(i * 0.25f);
+                }
             });
-        }
-        else
-        {
-            LeanTween.value(gamePrice, 0, 2f).setOnUpdate((float var) =>
+
+            int gamePrice = PhotonController.Instance.gameEntryPrice();
+
+            //  Practice me UI + reward = 0
+            if (PlayerPrefs.GetInt("IsPractice", 0) == 1)
             {
-                txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
-            }).setOnComplete(() =>
+                gamePrice = 0;
+            }
+            else
             {
-                txt.GetComponent<TextMeshProUGUI>().text = "0";
-            });
+                //  Normal match me reward do
+                int winnerPrice = PlayerPrefs.GetInt("playerCount") * gamePrice;
+
+                if (winnerColor == myPlayerColor)
+                {
+                    PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + winnerPrice);
+                    PlayerPrefs.Save();
+                }
+            }
+
+            for (int i = 0; i < activePlayerForPanel.Count; i++)
+            {
+                GameObject g = activePlayerForPanel[i];
+                Transform txt = g.transform.Find("Coin");
+
+                txt.GetComponent<TextMeshProUGUI>().text = gamePrice.ToString("###,###,###");
+
+                if (g == winnerObject)
+                {
+                    LeanTween.value(gamePrice, PlayerPrefs.GetInt("playerCount") * gamePrice, 2f).setOnUpdate((float var) =>
+                    {
+                        txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
+                    });
+                }
+                else
+                {
+                    LeanTween.value(gamePrice, 0, 2f).setOnUpdate((float var) =>
+                    {
+                        txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
+                    }).setOnComplete(() =>
+                    {
+                        txt.GetComponent<TextMeshProUGUI>().text = "0";
+                    });
+                }
+            }
         }
-    }
-}
         public void FinishedMenuBtn()
         {
             PlayerPrefs.DeleteKey("IsPractice"); // Clear practice flag on exit
@@ -992,58 +1024,58 @@ public void FinishedShow()
             // End game
             ChangeGameState(GameState.FINISHED);
         }
-public void UpdateStackedPawns(int wayID)
-{
-    List<Pawn> sameTilePawns = new List<Pawn>();
-
-    foreach (Pawn p in allPawns)
-    {
-        if (!p.inBase && !p.isCollected && p.currentWayID == wayID)
+        public void UpdateStackedPawns(int wayID)
         {
-            sameTilePawns.Add(p);
+            List<Pawn> sameTilePawns = new List<Pawn>();
+
+            foreach (Pawn p in allPawns)
+            {
+                if (!p.inBase && !p.isCollected && p.currentWayID == wayID)
+                {
+                    sameTilePawns.Add(p);
+                }
+            }
+
+            Vector3 centerPos = waypointParent.GetChild(wayID).position;
+
+            // Reset all to default first
+            foreach (Pawn p in sameTilePawns)
+            {
+                p.SetScaleToDefault();
+                p.transform.position = centerPos;
+            }
+
+            if (sameTilePawns.Count <= 1)
+                return;
+
+            float offset = 0.25f; // board size ke hisaab se adjust kar sakte ho
+            float scale = 0.85f;
+
+            if (sameTilePawns.Count == 2)
+            {
+                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, 0, 0);
+                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, 0, 0);
+            }
+            else if (sameTilePawns.Count == 3)
+            {
+                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, -offset * 0.5f, 0);
+                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, -offset * 0.5f, 0);
+                sameTilePawns[2].transform.position = centerPos + new Vector3(0, offset * 0.6f, 0);
+            }
+            else // 4 or more
+            {
+                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, offset, 0);
+                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, offset, 0);
+                sameTilePawns[2].transform.position = centerPos + new Vector3(-offset, -offset, 0);
+                sameTilePawns[3].transform.position = centerPos + new Vector3(offset, -offset, 0);
+            }
+
+            // Scale down all when stacked
+            for (int i = 0; i < sameTilePawns.Count; i++)
+            {
+                sameTilePawns[i].transform.localScale *= scale;
+            }
         }
-    }
-
-    Vector3 centerPos = waypointParent.GetChild(wayID).position;
-
-    // Reset all to default first
-    foreach (Pawn p in sameTilePawns)
-    {
-        p.SetScaleToDefault();
-        p.transform.position = centerPos;
-    }
-
-    if (sameTilePawns.Count <= 1)
-        return;
-
-    float offset = 0.25f; // board size ke hisaab se adjust kar sakte ho
-    float scale = 0.85f;
-
-    if (sameTilePawns.Count == 2)
-    {
-        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, 0, 0);
-        sameTilePawns[1].transform.position = centerPos + new Vector3( offset, 0, 0);
-    }
-    else if (sameTilePawns.Count == 3)
-    {
-        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, -offset * 0.5f, 0);
-        sameTilePawns[1].transform.position = centerPos + new Vector3( offset, -offset * 0.5f, 0);
-        sameTilePawns[2].transform.position = centerPos + new Vector3( 0,       offset * 0.6f, 0);
-    }
-    else // 4 or more
-    {
-        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset,  offset, 0);
-        sameTilePawns[1].transform.position = centerPos + new Vector3( offset,  offset, 0);
-        sameTilePawns[2].transform.position = centerPos + new Vector3(-offset, -offset, 0);
-        sameTilePawns[3].transform.position = centerPos + new Vector3( offset, -offset, 0);
-    }
-
-    // Scale down all when stacked
-    for (int i = 0; i < sameTilePawns.Count; i++)
-    {
-        sameTilePawns[i].transform.localScale *= scale;
-    }
-}
 
 
 
