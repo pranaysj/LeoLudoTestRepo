@@ -740,8 +740,7 @@ void Update()
 
             if (photonView.IsMine)
             {
-                currentPawnController.CheckAvailableMovements(currentDice == 5);
-               
+                currentPawnController.CheckAvailableMovements(currentDice == 5);      
 
             }
         }
@@ -992,6 +991,9 @@ public void FinishedShow()
             // End game
             ChangeGameState(GameState.FINISHED);
         }
+
+
+     // New Method for Stacked Pawns - 31-1-2026 Ye system Pawns ko Stack hone par Alag se dikhayega - Jaha Jaha same tile par 2 ya usse jyada pawns honge waha waha ye method call hoga aur unko thoda adjust karke dikhayega taki pata chale ki 1 nahi balki 2 ya usse jyada pawns hai
 public void UpdateStackedPawns(int wayID)
 {
     List<Pawn> sameTilePawns = new List<Pawn>();
@@ -1043,18 +1045,9 @@ public void UpdateStackedPawns(int wayID)
     {
         sameTilePawns[i].transform.localScale *= scale;
     }
-}
 
-
-
-
-
-
-
-
-
-
-
-
+   
+      
+    }
     }
 }

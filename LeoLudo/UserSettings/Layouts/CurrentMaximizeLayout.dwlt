@@ -723,9 +723,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.8202121, y: 0.0057761422, z: 0.031133391}
+    m_Target: {x: 0.6198793, y: 1.5417376, z: -9.006662}
     speed: 2
-    m_Value: {x: 0.8202121, y: 0.0057761422, z: 0.031133391}
+    m_Value: {x: 0.6198793, y: 1.5417376, z: -9.006662}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -775,9 +775,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.8866596
+    m_Target: 0.9092652
     speed: 2
-    m_Value: 6.8866596
+    m_Value: 0.9092652
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 32
+  controlID: 4093
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -882,14 +882,14 @@ MonoBehaviour:
     y: 0
     width: 747.2
     height: 233.59998
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -937,7 +937,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/BEK Studio/Ludo/Scenes
+    - Assets/DuplicateSafe/Sptites
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -947,16 +947,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/BEK Studio/Ludo/Scenes
+  - Assets/DuplicateSafe/Sptites
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\ASUS\Downloads\LNGT_Ludo-Feedback_1\Ludo-12-11-2025
+  m_LastProjectPath: D:\ProjectLudo\Github\LeoLudoTestRepo\LeoLudo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 125.50171}
-    m_SelectedIDs: c0ea0000
-    m_LastClickedID: 60096
-    m_ExpandedIDs: 0000000090ad000092ad000094ad000096ad0000
+    scrollPos: {x: 0, y: 193.40002}
+    m_SelectedIDs: 78ea0000
+    m_LastClickedID: 60024
+    m_ExpandedIDs: 000000008cad00008ead000090ad000056ae000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -985,7 +985,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090ad000092ad000094ad000096ad0000
+    m_ExpandedIDs: 000000008cad00008ead000090ad000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1011,10 +1011,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: dcea0000
-    m_LastClickedInstanceID: 60124
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_SelectedInstanceIDs: 90e8ffff
+    m_LastClickedInstanceID: -6000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c623000086ab000084ea0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1143,10 +1143,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d8e1ffffeae1ffff74e4ffffbae4fffffcfafffff4ffffff
+      scrollPos: {x: 0, y: 139.90002}
+      m_SelectedIDs: 90e8ffff
+      m_LastClickedID: -6000
+      m_ExpandedIDs: 98ebffff58efffff02fbffff089e0000a69f0000d6a2000068a70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1190,8 +1190,8 @@ MonoBehaviour:
     y: 0
     width: 374.40002
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}

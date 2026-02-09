@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ec2161a033d8f1942892ffff6e4510b8
+guid: dab3bef5782547244b81002beb02c9c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4855494642328692333
-    second: Leo_Ludo_0
+      213: -7360813396638526219
+    second: Adobe Express - file (8)_0
+  - first:
+      213: -6873495422174466464
+    second: Adobe Express - file (8)_1
+  - first:
+      213: -6703826054222382056
+    second: Adobe Express - file (8)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leo_Ludo_0
+      name: Adobe Express - file (8)_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 1494
-        height: 1024
+        x: 162
+        y: 262
+        width: 949
+        height: 750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3999f2b2951dd9cb0800000000000000
-      internalID: -4855494642328692333
+      spriteID: 5f49c6b073329d990800000000000000
+      internalID: -7360813396638526219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adobe Express - file (8)_1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 991
+        width: 143
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e6404b4507c90a0800000000000000
+      internalID: -6873495422174466464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Adobe Express - file (8)_2
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 981
+        width: 143
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cf01ad8b937f2a0800000000000000
+      internalID: -6703826054222382056
       vertices: []
       indices: 
       edges: []
@@ -147,8 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Leo_Ludo_0: -4855494642328692333
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

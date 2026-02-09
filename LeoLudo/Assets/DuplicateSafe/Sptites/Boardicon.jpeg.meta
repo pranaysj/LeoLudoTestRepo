@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec2161a033d8f1942892ffff6e4510b8
+guid: cb27e5cc6d6cdc44c8f42b8b643f0709
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4855494642328692333
-    second: Leo_Ludo_0
+      213: -7784595794755398707
+    second: Boardicon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leo_Ludo_0
+      name: Boardicon_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 1494
-        height: 1024
+        width: 1290
+        height: 1215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3999f2b2951dd9cb0800000000000000
-      internalID: -4855494642328692333
+      spriteID: dc3da958e5f87f390800000000000000
+      internalID: -7784595794755398707
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Leo_Ludo_0: -4855494642328692333
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

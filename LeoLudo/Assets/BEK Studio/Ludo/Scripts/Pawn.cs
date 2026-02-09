@@ -38,9 +38,10 @@ namespace BEKStudio {
                 currentWayID = firstWayID;
                 LeanTween.move(gameObject, GameController.Instance.waypointParent.GetChild(firstWayID).position, 0.3f).setOnComplete(() => {
                     AudioController.Instance.PlayPawnMoveSound();
-                    GameController.Instance.CheckGameStatus();
-                    GameController.Instance.CheckGameStatus();
-    GameController.Instance.UpdateStackedPawns(currentWayID); // 👈 ADD THIS
+
+                    // Check for stacked pawns on the same tile and update their positions
+                    GameController.Instance.CheckGameStatus(); // Call this to check for any game status changes due to the move
+                    GameController.Instance.UpdateStackedPawns(currentWayID); // New method to adjust positions of stacked pawns on the same tile - 31-1-2026 Ye method GameController me define kiya gaya hai aur jab bhi koi pawn move karega to ye method call hoga aur check karega ki kya us tile par 2 ya usse jyada pawns hai agar hai to unko thoda adjust karke dikhayega taki pata chale ki 1 nahi balki 2 ya usse jyada pawns hai
                 });
                 return;
             }
