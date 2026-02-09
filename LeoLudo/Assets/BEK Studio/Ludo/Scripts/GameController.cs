@@ -777,8 +777,7 @@ namespace BEKStudio
 
             if (photonView.IsMine)
             {
-                currentPawnController.CheckAvailableMovements(currentDice == 5);
-
+                currentPawnController.CheckAvailableMovements(currentDice == 5);      
 
             }
         }
@@ -1029,58 +1028,63 @@ namespace BEKStudio
             // End game
             ChangeGameState(GameState.FINISHED);
         }
-        public void UpdateStackedPawns(int wayID)
+
+
+     // New Method for Stacked Pawns - 31-1-2026 Ye system Pawns ko Stack hone par Alag se dikhayega - Jaha Jaha same tile par 2 ya usse jyada pawns honge waha waha ye method call hoga aur unko thoda adjust karke dikhayega taki pata chale ki 1 nahi balki 2 ya usse jyada pawns hai
+public void UpdateStackedPawns(int wayID)
+{
+    List<Pawn> sameTilePawns = new List<Pawn>();
+
+    foreach (Pawn p in allPawns)
+    {
+        if (!p.inBase && !p.isCollected && p.currentWayID == wayID)
         {
-
-            List<Pawn> sameTilePawns = new List<Pawn>();
-
-            foreach (Pawn p in allPawns)
-            {
-                if (!p.inBase && !p.isCollected && p.currentWayID == wayID)
-                {
-                    sameTilePawns.Add(p);
-                }
-            }
-
-            Vector3 centerPos = waypointParent.GetChild(wayID).position;
-
-            // Reset all to default first
-            foreach (Pawn p in sameTilePawns)
-            {
-                p.SetScaleToDefault();
-                p.transform.position = centerPos;
-            }
-
-            if (sameTilePawns.Count <= 1)
-                return;
-
-            float offset = 0.25f; // board size ke hisaab se adjust kar sakte ho
-            float scale = 0.85f;
-
-            if (sameTilePawns.Count == 2)
-            {
-                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, 0, 0);
-                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, 0, 0);
-            }
-            else if (sameTilePawns.Count == 3)
-            {
-                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, -offset * 0.5f, 0);
-                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, -offset * 0.5f, 0);
-                sameTilePawns[2].transform.position = centerPos + new Vector3(0, offset * 0.6f, 0);
-            }
-            else // 4 or more
-            {
-                sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, offset, 0);
-                sameTilePawns[1].transform.position = centerPos + new Vector3(offset, offset, 0);
-                sameTilePawns[2].transform.position = centerPos + new Vector3(-offset, -offset, 0);
-                sameTilePawns[3].transform.position = centerPos + new Vector3(offset, -offset, 0);
-            }
-
-            // Scale down all when stacked
-            for (int i = 0; i < sameTilePawns.Count; i++)
-            {
-                sameTilePawns[i].transform.localScale *= scale;
-            }
+            sameTilePawns.Add(p);
         }
+    }
+
+    Vector3 centerPos = waypointParent.GetChild(wayID).position;
+
+    // Reset all to default first
+    foreach (Pawn p in sameTilePawns)
+    {
+        p.SetScaleToDefault();
+        p.transform.position = centerPos;
+    }
+
+    if (sameTilePawns.Count <= 1)
+        return;
+
+    float offset = 0.25f; // board size ke hisaab se adjust kar sakte ho
+    float scale = 0.85f;
+
+    if (sameTilePawns.Count == 2)
+    {
+        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, 0, 0);
+        sameTilePawns[1].transform.position = centerPos + new Vector3( offset, 0, 0);
+    }
+    else if (sameTilePawns.Count == 3)
+    {
+        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset, -offset * 0.5f, 0);
+        sameTilePawns[1].transform.position = centerPos + new Vector3( offset, -offset * 0.5f, 0);
+        sameTilePawns[2].transform.position = centerPos + new Vector3( 0,       offset * 0.6f, 0);
+    }
+    else // 4 or more
+    {
+        sameTilePawns[0].transform.position = centerPos + new Vector3(-offset,  offset, 0);
+        sameTilePawns[1].transform.position = centerPos + new Vector3( offset,  offset, 0);
+        sameTilePawns[2].transform.position = centerPos + new Vector3(-offset, -offset, 0);
+        sameTilePawns[3].transform.position = centerPos + new Vector3( offset, -offset, 0);
+    }
+
+    // Scale down all when stacked
+    for (int i = 0; i < sameTilePawns.Count; i++)
+    {
+        sameTilePawns[i].transform.localScale *= scale;
+    }
+
+   
+      
+    }
     }
 }
