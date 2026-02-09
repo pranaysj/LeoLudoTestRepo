@@ -750,8 +750,8 @@ namespace BEKStudio
             if (!isLocal && !PhotonNetwork.IsMasterClient) return;
 
             gameState = GameState.DICE;
-            currentDice = Random.Range(4, 6);
-            //currentDice = Random.Range(0, 6);
+            //currentDice = Random.Range(4, 6);
+            currentDice = Random.Range(0, 6);
             AudioController.Instance.PlayDiceSound();
 
             if (isLocal)

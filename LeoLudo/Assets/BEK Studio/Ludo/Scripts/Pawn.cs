@@ -17,12 +17,15 @@ namespace BEKStudio
         Vector2 startScale;
         Vector2 startPosition;
 
+        private Animator animator;
 
         void Start()
         {
             inBase = true;
             startScale = transform.localScale;
             startPosition = transform.position;
+
+            animator = GetComponentInChildren<Animator>();
         }
 
         public void SetScaleToDefault()
@@ -69,7 +72,9 @@ namespace BEKStudio
                         Debug.Log($"11111111111     StartPosition : {startPosition},    firstWayID : {firstWayID},  currentWayID : {currentWayID},   Movement : {moveCount},    TotalCount : {totalCount}, ");
                         if (moveCount < 50)
                         {
-                            LeanTween.move(gameObject, GameController.Instance.waypointParent.GetChild(currentWayID).position, 0.1f).setDelay(0.05f).setOnComplete(() =>
+                            animator.SetTrigger("Jump");
+
+                            LeanTween.move(gameObject, GameController.Instance.waypointParent.GetChild(currentWayID).position, 0.3f).setDelay(0.05f).setOnComplete(() =>
                             {
                                 AudioController.Instance.PlayPawnMoveSound();
                                 moveCount++;
