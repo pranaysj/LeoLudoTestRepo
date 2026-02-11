@@ -836,6 +836,7 @@ namespace BEKStudio
                 pauseScreen.SetActive(false);
             }
 
+            AudioController.Instance.PlayWinSound();
             List<GameObject> activePlayerForPanel = new List<GameObject>();
             PhotonNetwork.AutomaticallySyncScene = false;
 
