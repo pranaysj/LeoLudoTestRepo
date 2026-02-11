@@ -856,8 +856,8 @@ void StopPulse(GameObject obj)
             if (!isLocal && !PhotonNetwork.IsMasterClient) return;
 
             gameState = GameState.DICE;
-            currentDice = Random.Range(4, 6);
-            //currentDice = Random.Range(0, 6);
+            //currentDice = Random.Range(4, 6);
+            currentDice = Random.Range(0, 6);
             AudioController.Instance.PlayDiceSound();
 
             if (isLocal)
@@ -942,6 +942,7 @@ void StopPulse(GameObject obj)
                 pauseScreen.SetActive(false);
             }
 
+            AudioController.Instance.PlayWinSound();
             List<GameObject> activePlayerForPanel = new List<GameObject>();
             PhotonNetwork.AutomaticallySyncScene = false;
 
