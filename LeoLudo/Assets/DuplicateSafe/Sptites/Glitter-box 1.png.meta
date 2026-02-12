@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Glitter-box 1_0: 6319070800607566422
+      Glitter-box 1_1: -4486667869543091243
+      Glitter-box 1_2: 8974558221603072886
+      Glitter-box 1_3: -2547044181065364033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
