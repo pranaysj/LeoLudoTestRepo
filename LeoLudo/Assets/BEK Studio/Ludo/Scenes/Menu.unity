@@ -1580,14 +1580,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 87990174}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 790007969}
         m_TargetAssemblyTypeName: BEKStudio.MenuController, Assembly-CSharp
-        m_MethodName: CopyBattleLink
+        m_MethodName: FriendsMatchButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4391,7 +4391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264204838}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4430,7 +4430,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 790007969}
         m_TargetAssemblyTypeName: BEKStudio.MenuController, Assembly-CSharp
-        m_MethodName: PawnSelectClose
+        m_MethodName: MiddleMultiplayerButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13090,6 +13090,7 @@ MonoBehaviour:
   settingScreen: {fileID: 1205289403}
   rewardScreen: {fileID: 2131497580}
   linkGameObject: {fileID: 1647102989}
+  shareLinkButtonGameObject: {fileID: 0}
   selectColourText: {fileID: 524914654}
   mainBottom: {fileID: 76928965}
   mainBottomHomeActive: {fileID: 76928965}

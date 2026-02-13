@@ -38,6 +38,7 @@ namespace BEKStudio
         public GameObject settingScreen;
         public GameObject rewardScreen;
         public GameObject linkGameObject;
+        public GameObject shareLinkButtonGameObject;
         [Header("PopUp Text")]
         public GameObject selectColourText;
         [Header("Main")]
@@ -385,6 +386,35 @@ namespace BEKStudio
             }
         }
 
+        //Friend Match Button in Multiplayer Panel
+        public void FriendsMatchButton()
+        {
+            if (PlayerPrefs.HasKey("pawnColor"))
+            {
+                PlayerPrefs.SetString("mode", "friend");
+                PlayerPrefs.Save();
+                PlayerCountShow();
+                //friendPanel.SetActive(true);   // 👈 Open panel
+            }
+            else
+            {
+                selectColourText.SetActive(true);
+                LeanTween.scale(selectColourText, Vector2.one, 0.2f)
+                .setEaseOutBack()
+                .setOnComplete(() =>
+                {
+                    LeanTween.scale(selectColourText, Vector2.zero, 0.2f)
+                    .setDelay(1.0f)
+                    .setEaseInBack()
+                    .setOnComplete(() =>
+                    {
+                        selectColourText.SetActive(false);
+                    });
+                });
+            }
+        }
+
+
         //OLD FUNCTIONS
         public void MainOnlineBtn()
         {
@@ -715,10 +745,17 @@ namespace BEKStudio
             PlayerPrefs.SetInt("playerCount", playerCount);
             PlayerPrefs.Save();
 
+
+
             //  PRACTICE FLAG CLEAR (important)
 
 
-            if(PhotonController.Instance.gameMode() == "quick")
+            if (PhotonController.Instance.gameMode() == "quick")
+            {
+                OnlineShow();
+                PhotonController.Instance.Connect();
+            }
+            else if (PhotonController.Instance.gameMode() == "friend")
             {
                 OnlineShow();
                 PhotonController.Instance.Connect();
@@ -732,6 +769,13 @@ namespace BEKStudio
             {
                 SceneManager.LoadScene("Game");
             }
+        }
+
+        public void CopyInviteLink()
+        {
+            string link = PhotonController.Instance.GetInviteLink();
+            GUIUtility.systemCopyBuffer = link;
+            LinkTextAnimation();
         }
 
         //New Method to close player count panel and delete pawncolor key
@@ -898,11 +942,11 @@ namespace BEKStudio
             LinkTextAnimation();
         }
 
-        public void CopyInviteLink()
-        {
-            GUIUtility.systemCopyBuffer = InviteLink;
-            LinkTextAnimation();
-        }
+        //public void CopyInviteLink()
+        //{
+        //    GUIUtility.systemCopyBuffer = InviteLink;
+        //    LinkTextAnimation();
+        //}
         private void LinkTextAnimation()
         {
             linkGameObject.SetActive(true);
