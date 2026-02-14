@@ -66,6 +66,9 @@ namespace BEKStudio
         public GameObject onlinePanel;
         public TextMeshProUGUI onlineInfoText;
         public Button onlineCancelButton;
+        public TextMeshProUGUI roomCodeText;
+        public TextMeshProUGUI roomlinkText;
+
         [Header("Username")]
         public GameObject usernameScreen;
         public GameObject usernamePanel;

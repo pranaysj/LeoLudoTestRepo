@@ -1,0 +1,2808 @@
+fileFormatVersion: 2
+guid: 487d2e1fa4657b74db30899d921cb8b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8543356750982770391
+    second: Glitter-box 2_0
+  - first:
+      213: -1293482341580840681
+    second: Glitter-box 2_1
+  - first:
+      213: 4391809171667610145
+    second: Glitter-box 2_2
+  - first:
+      213: 8584356726132487342
+    second: Glitter-box 2_3
+  - first:
+      213: 9126145895146061362
+    second: Glitter-box 2_4
+  - first:
+      213: 3539725074322021711
+    second: Glitter-box 2_5
+  - first:
+      213: -299073288033427218
+    second: Glitter-box 2_6
+  - first:
+      213: -1000785286032476144
+    second: Glitter-box 2_7
+  - first:
+      213: 4405197883554563720
+    second: Glitter-box 2_8
+  - first:
+      213: 2401051181208481869
+    second: Glitter-box 2_9
+  - first:
+      213: 5596668744191374206
+    second: Glitter-box 2_10
+  - first:
+      213: 9106821594102032915
+    second: Glitter-box 2_11
+  - first:
+      213: 7977474258440617141
+    second: Glitter-box 2_12
+  - first:
+      213: 5150778470953458329
+    second: Glitter-box 2_13
+  - first:
+      213: -6737409542328472075
+    second: Glitter-box 2_14
+  - first:
+      213: 8765814687912764605
+    second: Glitter-box 2_15
+  - first:
+      213: -864444824025671405
+    second: Glitter-box 2_16
+  - first:
+      213: 1143957752471620326
+    second: Glitter-box 2_17
+  - first:
+      213: -993560220434053453
+    second: Glitter-box 2_18
+  - first:
+      213: -4318818253525359440
+    second: Glitter-box 2_19
+  - first:
+      213: 3693342521099935299
+    second: Glitter-box 2_20
+  - first:
+      213: -4780896395201446593
+    second: Glitter-box 2_21
+  - first:
+      213: -4105831760330982242
+    second: Glitter-box 2_22
+  - first:
+      213: 6386866474955964193
+    second: Glitter-box 2_23
+  - first:
+      213: 7002668309456922569
+    second: Glitter-box 2_24
+  - first:
+      213: -8868915545879278139
+    second: Glitter-box 2_25
+  - first:
+      213: 3307813533901906395
+    second: Glitter-box 2_26
+  - first:
+      213: 5504165513606647636
+    second: Glitter-box 2_27
+  - first:
+      213: -7934755008935105692
+    second: Glitter-box 2_28
+  - first:
+      213: 3083093962420360833
+    second: Glitter-box 2_29
+  - first:
+      213: -4613311106464532601
+    second: Glitter-box 2_30
+  - first:
+      213: -7028032972590942264
+    second: Glitter-box 2_31
+  - first:
+      213: -8856268419287235856
+    second: Glitter-box 2_32
+  - first:
+      213: 6636053817374605235
+    second: Glitter-box 2_33
+  - first:
+      213: -2226778885390086617
+    second: Glitter-box 2_34
+  - first:
+      213: -3923530213889539706
+    second: Glitter-box 2_35
+  - first:
+      213: 7498246041867030398
+    second: Glitter-box 2_36
+  - first:
+      213: 2818611127441919052
+    second: Glitter-box 2_37
+  - first:
+      213: 7900960784773084360
+    second: Glitter-box 2_38
+  - first:
+      213: 6017560615963476841
+    second: Glitter-box 2_39
+  - first:
+      213: 3728513300135283218
+    second: Glitter-box 2_40
+  - first:
+      213: 3445184055175150667
+    second: Glitter-box 2_41
+  - first:
+      213: 8060236702215051637
+    second: Glitter-box 2_42
+  - first:
+      213: -3979022826962219953
+    second: Glitter-box 2_43
+  - first:
+      213: 178753941321713094
+    second: Glitter-box 2_44
+  - first:
+      213: -1804069929855543151
+    second: Glitter-box 2_45
+  - first:
+      213: 496878424397899888
+    second: Glitter-box 2_46
+  - first:
+      213: 7307251176006232232
+    second: Glitter-box 2_47
+  - first:
+      213: -5364437080233781302
+    second: Glitter-box 2_48
+  - first:
+      213: -1958137268669116232
+    second: Glitter-box 2_49
+  - first:
+      213: -4146565844955213743
+    second: Glitter-box 2_50
+  - first:
+      213: -2529905988079943739
+    second: Glitter-box 2_51
+  - first:
+      213: 7437331804940430995
+    second: Glitter-box 2_52
+  - first:
+      213: -4684868600549867647
+    second: Glitter-box 2_53
+  - first:
+      213: 4698703085893250449
+    second: Glitter-box 2_54
+  - first:
+      213: -7480591427507035560
+    second: Glitter-box 2_55
+  - first:
+      213: 6852904476122573188
+    second: Glitter-box 2_56
+  - first:
+      213: 6285736357349928059
+    second: Glitter-box 2_57
+  - first:
+      213: 8861297418106304922
+    second: Glitter-box 2_58
+  - first:
+      213: 8016587703606913460
+    second: Glitter-box 2_59
+  - first:
+      213: 8562321967571750764
+    second: Glitter-box 2_60
+  - first:
+      213: 2848088905004553648
+    second: Glitter-box 2_61
+  - first:
+      213: 6013614387015381486
+    second: Glitter-box 2_62
+  - first:
+      213: 1428778229894610006
+    second: Glitter-box 2_63
+  - first:
+      213: -6649905576411108955
+    second: Glitter-box 2_64
+  - first:
+      213: 784210891089627609
+    second: Glitter-box 2_65
+  - first:
+      213: -9090271785629283355
+    second: Glitter-box 2_66
+  - first:
+      213: 8325582341035757858
+    second: Glitter-box 2_67
+  - first:
+      213: 3618267761290312818
+    second: Glitter-box 2_68
+  - first:
+      213: 8452799036708062287
+    second: Glitter-box 2_69
+  - first:
+      213: -7125816932097034919
+    second: Glitter-box 2_70
+  - first:
+      213: 8636187239707413594
+    second: Glitter-box 2_71
+  - first:
+      213: -9093901412284675040
+    second: Glitter-box 2_72
+  - first:
+      213: -6745200934619713676
+    second: Glitter-box 2_73
+  - first:
+      213: 5454628335391979159
+    second: Glitter-box 2_74
+  - first:
+      213: -4051629749863754033
+    second: Glitter-box 2_75
+  - first:
+      213: 6465845337464840518
+    second: Glitter-box 2_76
+  - first:
+      213: 6032201994624451717
+    second: Glitter-box 2_77
+  - first:
+      213: 3269922157501341681
+    second: Glitter-box 2_78
+  - first:
+      213: 2050000318812360942
+    second: Glitter-box 2_79
+  - first:
+      213: -6284239697710493702
+    second: Glitter-box 2_80
+  - first:
+      213: 7379643276780765893
+    second: Glitter-box 2_81
+  - first:
+      213: -4037326947403825081
+    second: Glitter-box 2_82
+  - first:
+      213: -8268229196923720256
+    second: Glitter-box 2_83
+  - first:
+      213: 946636820309319079
+    second: Glitter-box 2_84
+  - first:
+      213: -95745927256439308
+    second: Glitter-box 2_85
+  - first:
+      213: -6708631341710036134
+    second: Glitter-box 2_86
+  - first:
+      213: -8352382640887833194
+    second: Glitter-box 2_87
+  - first:
+      213: -6590302565844684578
+    second: Glitter-box 2_88
+  - first:
+      213: -3275087008731098501
+    second: Glitter-box 2_89
+  - first:
+      213: 6915436971143056496
+    second: Glitter-box 2_90
+  - first:
+      213: 4096960881245737586
+    second: Glitter-box 2_91
+  - first:
+      213: -6925553204547144585
+    second: Glitter-box 2_92
+  - first:
+      213: -5778251300853375645
+    second: Glitter-box 2_93
+  - first:
+      213: -6618211728424702894
+    second: Glitter-box 2_94
+  - first:
+      213: 6241910924778203073
+    second: Glitter-box 2_95
+  - first:
+      213: -1821461415726233109
+    second: Glitter-box 2_96
+  - first:
+      213: 5404013203083303471
+    second: Glitter-box 2_97
+  - first:
+      213: -3551452957385121957
+    second: Glitter-box 2_98
+  - first:
+      213: -5494556949450508227
+    second: Glitter-box 2_99
+  - first:
+      213: 9144672428133722326
+    second: Glitter-box 2_100
+  - first:
+      213: -2040760127802029219
+    second: Glitter-box 2_101
+  - first:
+      213: 2935960992528820164
+    second: Glitter-box 2_102
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Glitter-box 2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 2381
+        height: 1595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9219c34bc46ef6980800000000000000
+      internalID: -8543356750982770391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_1
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 1585
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71165dad9a0ac0ee0800000000000000
+      internalID: -1293482341580840681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_2
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 1581
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12aec8e3c27d2fc30800000000000000
+      internalID: 4391809171667610145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1558
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4bc56e5f2c12770800000000000000
+      internalID: 8584356726132487342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_4
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 1564
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ef198d65596ae70800000000000000
+      internalID: 9126145895146061362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_5
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1556
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4dd1896331af1130800000000000000
+      internalID: 3539725074322021711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_6
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1550
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0a5f8dd6a79dbf0800000000000000
+      internalID: -299073288033427218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_7
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1541
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 018b891b51f7c12f0800000000000000
+      internalID: -1000785286032476144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_8
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1543
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8868296a228622d30800000000000000
+      internalID: 4405197883554563720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_9
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 1527
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40b677f35f325120800000000000000
+      internalID: 2401051181208481869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_10
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 1514
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73fe07029c5bad40800000000000000
+      internalID: 5596668744191374206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_11
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 1492
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31aee456dfde16e70800000000000000
+      internalID: 9106821594102032915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_12
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 1486
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcfc23529ea5be60800000000000000
+      internalID: 7977474258440617141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_13
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1478
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a19e5babd3b7740800000000000000
+      internalID: 5150778470953458329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_14
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1473
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd2f23b7b9ef72a0800000000000000
+      internalID: -6737409542328472075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_15
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 1477
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db421ffe30e66a970800000000000000
+      internalID: 8765814687912764605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1171
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31956083300e004f0800000000000000
+      internalID: -864444824025671405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_17
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1121
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea0022d38720ef00800000000000000
+      internalID: 1143957752471620326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1120
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6c11e5e3a2632f0800000000000000
+      internalID: -993560220434053453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_19
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1109
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4e5253ea97014c0800000000000000
+      internalID: -4318818253525359440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_20
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1084
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ed10c6473614330800000000000000
+      internalID: 3693342521099935299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1084
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d72101f08d6adb0800000000000000
+      internalID: -4780896395201446593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1034
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c74f184c72507c0800000000000000
+      internalID: -4105831760330982242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_23
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1022
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ff99b4835b2a850800000000000000
+      internalID: 6386866474955964193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_24
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 946
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7a019c9b97e2160800000000000000
+      internalID: 7002668309456922569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_25
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 847
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd0de0fc484be480800000000000000
+      internalID: -8868915545879278139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_26
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 836
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1e37f22e6b7ed20800000000000000
+      internalID: 3307813533901906395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_27
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 829
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fca7f4f59b26c40800000000000000
+      internalID: 5504165513606647636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_28
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 822
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46beba80c5612e190800000000000000
+      internalID: -7934755008935105692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_29
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 797
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1869737bf9959ca20800000000000000
+      internalID: 3083093962420360833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_30
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 797
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78731d4bdf93affb0800000000000000
+      internalID: -4613311106464532601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_31
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 782
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7fbfe5f39677e90800000000000000
+      internalID: -7028032972590942264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_32
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 761
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2cfd09bc6381580800000000000000
+      internalID: -8856268419287235856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 760
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bffcfe99cff71c50800000000000000
+      internalID: 6636053817374605235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_34
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 759
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ecbf6d664e811e0800000000000000
+      internalID: -2226778885390086617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_35
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 747
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6810a97ee02dc89c0800000000000000
+      internalID: -3923530213889539706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_36
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 742
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f86f33c0f1f0860800000000000000
+      internalID: 7498246041867030398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 724
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c832303e7bd1720800000000000000
+      internalID: 2818611127441919052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_38
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 723
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4f0b009f9d5ad60800000000000000
+      internalID: 7900960784773084360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_39
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 699
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96342e07f7ba28350800000000000000
+      internalID: 6017560615963476841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 699
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a02ea87175eb330800000000000000
+      internalID: 3728513300135283218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_41
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 660
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cfd8215a0cfcf20800000000000000
+      internalID: 3445184055175150667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_42
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 637
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57918116396bbdf60800000000000000
+      internalID: 8060236702215051637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_43
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 550
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c0fb512dba7c8c0800000000000000
+      internalID: -3979022826962219953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 526
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c58ea633cf0b7200800000000000000
+      internalID: 178753941321713094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 499
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1981ff805f7a6f6e0800000000000000
+      internalID: -1804069929855543151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_46
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 463
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078eace5b4445e600800000000000000
+      internalID: 496878424397899888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 426
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a82866aa32986560800000000000000
+      internalID: 7307251176006232232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_48
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 424
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac75bb4c5e0bd85b0800000000000000
+      internalID: -5364437080233781302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 398
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0168f578c43d4e0800000000000000
+      internalID: -1958137268669116232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_50
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 400
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1505dad55507476c0800000000000000
+      internalID: -4146565844955213743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_51
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 350
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf7c5968e7f3ecd0800000000000000
+      internalID: -2529905988079943739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_52
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 339
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e60363fd5b63760800000000000000
+      internalID: 7437331804940430995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_53
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 314
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ff7dc44d00cfeb0800000000000000
+      internalID: -4684868600549867647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_54
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 315
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19de2b3df85253140800000000000000
+      internalID: 4698703085893250449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_55
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 227
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8526c950bb99f2890800000000000000
+      internalID: -7480591427507035560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_56
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 233
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48968f210586a1f50800000000000000
+      internalID: 6852904476122573188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_57
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 165
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ca99be9eb6b3750800000000000000
+      internalID: 6285736357349928059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_58
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 111
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99ff477d07a9fa70800000000000000
+      internalID: 8861297418106304922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_59
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 111
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b92140fa04a04f60800000000000000
+      internalID: 8016587703606913460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_60
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 110
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f43a1e67a73d670800000000000000
+      internalID: 8562321967571750764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_61
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 110
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5178fe4c1768720800000000000000
+      internalID: 2848088905004553648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_62
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 110
+        width: 57
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1fa3a6c66a47350800000000000000
+      internalID: 6013614387015381486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_63
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 111
+        width: 70
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65cfda7ea3a04d310800000000000000
+      internalID: 1428778229894610006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_64
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 110
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a960286c1ac6b3a0800000000000000
+      internalID: -6649905576411108955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_65
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 111
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9c36886a312ea00800000000000000
+      internalID: 784210891089627609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_66
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 112
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb8fc929fdd8d180800000000000000
+      internalID: -9090271785629283355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_67
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 111
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22193b147096a8370800000000000000
+      internalID: 8325582341035757858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_68
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 112
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27cf4f5cb5ba63230800000000000000
+      internalID: 3618267761290312818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_69
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 111
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f448fb460ff5e4570800000000000000
+      internalID: 8452799036708062287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_70
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 109
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95574e321430c1d90800000000000000
+      internalID: -7125816932097034919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_71
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 112
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c858cb986e9d770800000000000000
+      internalID: 8636187239707413594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_72
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 112
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c495ad8d8fbc180800000000000000
+      internalID: -9093901412284675040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_73
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 108
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47feb51dc7b3462a0800000000000000
+      internalID: -6745200934619713676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_74
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 110
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796b1d8329bb2bb40800000000000000
+      internalID: 5454628335391979159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_75
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 113
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc657fd7538b5c7c0800000000000000
+      internalID: -4051629749863754033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_76
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6412530b31c4bb950800000000000000
+      internalID: 6465845337464840518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_77
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 111
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5844efe01cfa6b350800000000000000
+      internalID: 6032201994624451717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_78
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 113
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ffdb01a0e8116d20800000000000000
+      internalID: 3269922157501341681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_79
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 113
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee09f38bd60137c10800000000000000
+      internalID: 2050000318812360942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_80
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 113
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affce8e4a45e9c8a0800000000000000
+      internalID: -6284239697710493702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_81
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 113
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c20e911672c96660800000000000000
+      internalID: 7379643276780765893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_82
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 113
+        width: 57
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74002e1388888f7c0800000000000000
+      internalID: -4037326947403825081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_83
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 113
+        width: 70
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd29d33a59514d80800000000000000
+      internalID: -8268229196923720256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_84
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 112
+        width: 43
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad97dd2c21232d00800000000000000
+      internalID: 946636820309319079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_85
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f580312697dbaef0800000000000000
+      internalID: -95745927256439308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_86
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 113
+        width: 140
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53325ca65726e2a0800000000000000
+      internalID: -6708631341710036134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_87
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 112
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dddbdad30661c80800000000000000
+      internalID: -8352382640887833194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_88
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 107
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed07b78bbba8a84a0800000000000000
+      internalID: -6590302565844684578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_89
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 111
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72161cb7bd8c82d0800000000000000
+      internalID: -3275087008731098501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_90
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 98
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cc593294198ff50800000000000000
+      internalID: 6915436971143056496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_91
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 101
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272d25107345bd830800000000000000
+      internalID: 4096960881245737586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_92
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 91
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77436e9bd0e73ef90800000000000000
+      internalID: -6925553204547144585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_93
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 85
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d12bd6e078fcfa0800000000000000
+      internalID: -5778251300853375645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_94
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 78
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cebee6f736724a0800000000000000
+      internalID: -6618211728424702894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_95
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 63
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7e80f3ae8bf9650800000000000000
+      internalID: 6241910924778203073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_96
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 47
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9ce8f2e7ed8b6e0800000000000000
+      internalID: -1821461415726233109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_97
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 49
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a1d436069eefa40800000000000000
+      internalID: 5404013203083303471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_98
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 48
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f9c860a54b6bec0800000000000000
+      internalID: -3551452957385121957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_99
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 41
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3839ddd0996fb3b0800000000000000
+      internalID: -5494556949450508227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_100
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 33
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d828327f1768ee70800000000000000
+      internalID: 9144672428133722326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_101
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 29
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b4496e973cda3e0800000000000000
+      internalID: -2040760127802029219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glitter-box 2_102
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 24
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c76512a7f0aeb820800000000000000
+      internalID: 2935960992528820164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Glitter-box 2_0: -8543356750982770391
+      Glitter-box 2_1: -1293482341580840681
+      Glitter-box 2_10: 5596668744191374206
+      Glitter-box 2_100: 9144672428133722326
+      Glitter-box 2_101: -2040760127802029219
+      Glitter-box 2_102: 2935960992528820164
+      Glitter-box 2_11: 9106821594102032915
+      Glitter-box 2_12: 7977474258440617141
+      Glitter-box 2_13: 5150778470953458329
+      Glitter-box 2_14: -6737409542328472075
+      Glitter-box 2_15: 8765814687912764605
+      Glitter-box 2_16: -864444824025671405
+      Glitter-box 2_17: 1143957752471620326
+      Glitter-box 2_18: -993560220434053453
+      Glitter-box 2_19: -4318818253525359440
+      Glitter-box 2_2: 4391809171667610145
+      Glitter-box 2_20: 3693342521099935299
+      Glitter-box 2_21: -4780896395201446593
+      Glitter-box 2_22: -4105831760330982242
+      Glitter-box 2_23: 6386866474955964193
+      Glitter-box 2_24: 7002668309456922569
+      Glitter-box 2_25: -8868915545879278139
+      Glitter-box 2_26: 3307813533901906395
+      Glitter-box 2_27: 5504165513606647636
+      Glitter-box 2_28: -7934755008935105692
+      Glitter-box 2_29: 3083093962420360833
+      Glitter-box 2_3: 8584356726132487342
+      Glitter-box 2_30: -4613311106464532601
+      Glitter-box 2_31: -7028032972590942264
+      Glitter-box 2_32: -8856268419287235856
+      Glitter-box 2_33: 6636053817374605235
+      Glitter-box 2_34: -2226778885390086617
+      Glitter-box 2_35: -3923530213889539706
+      Glitter-box 2_36: 7498246041867030398
+      Glitter-box 2_37: 2818611127441919052
+      Glitter-box 2_38: 7900960784773084360
+      Glitter-box 2_39: 6017560615963476841
+      Glitter-box 2_4: 9126145895146061362
+      Glitter-box 2_40: 3728513300135283218
+      Glitter-box 2_41: 3445184055175150667
+      Glitter-box 2_42: 8060236702215051637
+      Glitter-box 2_43: -3979022826962219953
+      Glitter-box 2_44: 178753941321713094
+      Glitter-box 2_45: -1804069929855543151
+      Glitter-box 2_46: 496878424397899888
+      Glitter-box 2_47: 7307251176006232232
+      Glitter-box 2_48: -5364437080233781302
+      Glitter-box 2_49: -1958137268669116232
+      Glitter-box 2_5: 3539725074322021711
+      Glitter-box 2_50: -4146565844955213743
+      Glitter-box 2_51: -2529905988079943739
+      Glitter-box 2_52: 7437331804940430995
+      Glitter-box 2_53: -4684868600549867647
+      Glitter-box 2_54: 4698703085893250449
+      Glitter-box 2_55: -7480591427507035560
+      Glitter-box 2_56: 6852904476122573188
+      Glitter-box 2_57: 6285736357349928059
+      Glitter-box 2_58: 8861297418106304922
+      Glitter-box 2_59: 8016587703606913460
+      Glitter-box 2_6: -299073288033427218
+      Glitter-box 2_60: 8562321967571750764
+      Glitter-box 2_61: 2848088905004553648
+      Glitter-box 2_62: 6013614387015381486
+      Glitter-box 2_63: 1428778229894610006
+      Glitter-box 2_64: -6649905576411108955
+      Glitter-box 2_65: 784210891089627609
+      Glitter-box 2_66: -9090271785629283355
+      Glitter-box 2_67: 8325582341035757858
+      Glitter-box 2_68: 3618267761290312818
+      Glitter-box 2_69: 8452799036708062287
+      Glitter-box 2_7: -1000785286032476144
+      Glitter-box 2_70: -7125816932097034919
+      Glitter-box 2_71: 8636187239707413594
+      Glitter-box 2_72: -9093901412284675040
+      Glitter-box 2_73: -6745200934619713676
+      Glitter-box 2_74: 5454628335391979159
+      Glitter-box 2_75: -4051629749863754033
+      Glitter-box 2_76: 6465845337464840518
+      Glitter-box 2_77: 6032201994624451717
+      Glitter-box 2_78: 3269922157501341681
+      Glitter-box 2_79: 2050000318812360942
+      Glitter-box 2_8: 4405197883554563720
+      Glitter-box 2_80: -6284239697710493702
+      Glitter-box 2_81: 7379643276780765893
+      Glitter-box 2_82: -4037326947403825081
+      Glitter-box 2_83: -8268229196923720256
+      Glitter-box 2_84: 946636820309319079
+      Glitter-box 2_85: -95745927256439308
+      Glitter-box 2_86: -6708631341710036134
+      Glitter-box 2_87: -8352382640887833194
+      Glitter-box 2_88: -6590302565844684578
+      Glitter-box 2_89: -3275087008731098501
+      Glitter-box 2_9: 2401051181208481869
+      Glitter-box 2_90: 6915436971143056496
+      Glitter-box 2_91: 4096960881245737586
+      Glitter-box 2_92: -6925553204547144585
+      Glitter-box 2_93: -5778251300853375645
+      Glitter-box 2_94: -6618211728424702894
+      Glitter-box 2_95: 6241910924778203073
+      Glitter-box 2_96: -1821461415726233109
+      Glitter-box 2_97: 5404013203083303471
+      Glitter-box 2_98: -3551452957385121957
+      Glitter-box 2_99: -5494556949450508227
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

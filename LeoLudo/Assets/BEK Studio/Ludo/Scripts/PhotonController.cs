@@ -119,7 +119,8 @@ namespace BEKStudio
 
             string roomCode;
 
-            roomCode = "FRIEND_" + UnityEngine.Random.Range(1000, 9999);
+            int code = UnityEngine.Random.Range(1000, 9999);
+            roomCode = "FRIEND_" + code;
             PlayerPrefs.SetString("friendRoomName", roomCode);
 
 
@@ -132,6 +133,8 @@ namespace BEKStudio
             PhotonNetwork.CreateRoom(roomCode, roomOptions);
 
             MenuController.Instance.shareLinkButtonGameObject.SetActive(true);
+            MenuController.Instance.roomCodeText.text = code.ToString();
+            MenuController.Instance.roomlinkText.text = GetInviteLink();
         }
 
         public string GetInviteLink()
