@@ -918,7 +918,7 @@ Debug.Log("FINISH ORDER: " + string.Join(",", finishOrder));
 
             gameState = GameState.DICE;
             //currentDice = Random.Range(4, 6);
-            currentDice = Random.Range(4, 6); // Testing ke liye 0-5 range me rakha he taki sare dice number aa sake    
+            currentDice = Random.Range(0, 6);
             AudioController.Instance.PlayDiceSound();
 
             if (isLocal)

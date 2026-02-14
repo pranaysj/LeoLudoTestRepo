@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
+using System;
 
 namespace BEKStudio
 {
@@ -86,7 +87,59 @@ namespace BEKStudio
 
         public override void OnJoinedLobby()
         {
-            FindRoom();
+            
+            //  Check: kya link se join karna hai?
+            
+    if (PlayerPrefs.GetInt("joinByLink", 0) == 1)
+    {
+        string roomToJoin = PlayerPrefs.GetString("joinRoomName");
+        Debug.Log("Joining room by link: " + roomToJoin);
+
+        PhotonNetwork.JoinRoom(roomToJoin);
+        return;
+    }
+            
+       //Gulrej Changes: Added condition to check game mode before deciding to create or find room     
+            
+            
+            //FindRoom();
+            if (gameMode() == "friend")
+            {
+                CreateFriendRoom();
+            }
+            else
+            {
+                FindRoom(); // Quick match logic
+            }
+        }
+
+        void CreateFriendRoom()
+        {
+            MenuController.Instance.OnlineInfoMsg("Creating friend room...");
+
+            string roomCode;
+
+            roomCode = "FRIEND_" + UnityEngine.Random.Range(1000, 9999);
+            PlayerPrefs.SetString("friendRoomName", roomCode);
+
+
+
+            RoomOptions roomOptions = new RoomOptions();
+            roomOptions.MaxPlayers = (byte)PlayerPrefs.GetInt("playerCount");
+            roomOptions.IsVisible = false; // Important → hidden room
+            roomOptions.IsOpen = true;
+
+            PhotonNetwork.CreateRoom(roomCode, roomOptions);
+
+            MenuController.Instance.shareLinkButtonGameObject.SetActive(true);
+        }
+
+        public string GetInviteLink()
+        {
+            //loop untill the room is created and name is assigned to it
+
+            string roomCode = PlayerPrefs.GetString("friendRoomName");
+            return "mygame://join?room=" + roomCode + "&count=" + PlayerPrefs.GetInt("playerCount");
         }
 
         public override void OnLeftLobby()
@@ -124,6 +177,12 @@ namespace BEKStudio
 
         public override void OnJoinedRoom()
         {
+           
+           // Clear join flag
+    PlayerPrefs.SetInt("joinByLink", 0);
+    PlayerPrefs.Save();
+           //Gulrej Changes: Added condition to check if player joined via link and update the UI accordingly
+           
             PhotonNetwork.AutomaticallySyncScene = true;
 
             ExitGames.Client.Photon.Hashtable userHastable = new ExitGames.Client.Photon.Hashtable();
@@ -131,8 +190,21 @@ namespace BEKStudio
             userHastable.Add("colorID", getMyOrder());
             PhotonNetwork.SetPlayerCustomProperties(userHastable);
 
-            MenuController.Instance.OnlineInfoMsg("Joined Room \n" + PhotonNetwork.PlayerList.Length + "/" + (int)PhotonNetwork.CurrentRoom.CustomProperties["playerCount"]);
-            if (PhotonNetwork.PlayerList.Length == (int)PhotonNetwork.CurrentRoom.CustomProperties["playerCount"])
+
+            int requiredPlayers;
+
+            if (gameMode() == "friend")
+            {
+                requiredPlayers = PhotonNetwork.CurrentRoom.MaxPlayers;
+            }
+            else
+            {
+                requiredPlayers = (int)PhotonNetwork.CurrentRoom.CustomProperties["playerCount"];
+            }
+
+            MenuController.Instance.OnlineInfoMsg("Joined Room \n" + PhotonNetwork.PlayerList.Length + "/" + requiredPlayers);
+
+            if (PhotonNetwork.PlayerList.Length == requiredPlayers)
             {
                 MenuController.Instance.OnlineInfoMsg("Starting...");
 
@@ -176,10 +248,23 @@ namespace BEKStudio
 
         public override void OnCreatedRoom()
         {
-
+            if (gameMode() == "friend")
+            {
+                MenuController.Instance.OnlineInfoMsg(
+                    "Room Created!\nRoom Code: " + PhotonNetwork.CurrentRoom.Name +
+                    "Joined : " + PhotonNetwork.PlayerList.Length + "/" + PlayerPrefs.GetInt("playerCount")
+                );
+            }
         }
 
-        public override void OnPlayerEnteredRoom(Player newPlayer)
+
+
+
+
+
+// Old Code
+
+     /*   public override void OnPlayerEnteredRoom(Player newPlayer)
         {
             MenuController.Instance.OnlineInfoMsg("Joined Room \n" + PhotonNetwork.PlayerList.Length + "/" + PlayerPrefs.GetInt("playerCount"));
 
@@ -192,7 +277,52 @@ namespace BEKStudio
                     StartCoroutine(DelayForCustomProperties());
                 }
             }
+        }*/
+
+// New Code 
+
+
+
+
+public override void OnPlayerEnteredRoom(Player newPlayer)
+{
+    int requiredPlayers;
+
+    if (gameMode() == "friend")
+    {
+        requiredPlayers = PhotonNetwork.CurrentRoom.MaxPlayers;
+    }
+    else
+    {
+        requiredPlayers = (int)PhotonNetwork.CurrentRoom.CustomProperties["playerCount"];
+    }
+
+    MenuController.Instance.OnlineInfoMsg(
+        "Joined Room \n" + PhotonNetwork.PlayerList.Length + "/" + requiredPlayers
+    );
+
+    if (PhotonNetwork.PlayerList.Length == requiredPlayers)
+    {
+        MenuController.Instance.OnlineInfoMsg("Starting...");
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            StartCoroutine(DelayForCustomProperties());
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
