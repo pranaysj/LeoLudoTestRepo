@@ -1,4 +1,4 @@
-﻿using Photon.Pun;
+using Photon.Pun;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -69,6 +69,7 @@ namespace BEKStudio
         // UI refs undo ke liye 10-2-2026 me add kiya gya he
         public GameObject undoSimpleimage;   // "1"
         public GameObject undoAdImage;     // Ad icon
+        bool rewardGiven = false;
 
 
 
@@ -112,6 +113,7 @@ namespace BEKStudio
         void OnEnable()
         {
             isLocal = PhotonController.Instance.gameMode() == "computer";
+            UpdateUndoButtonUI(); //12-2-2026 me add kiya gya he taki undo button ka UI sahi se update ho jaye jab game start ho
 
             Debug.Log("The game is going to start --- " + isLocal);
             photonView = GetComponent<PhotonView>();
@@ -211,7 +213,7 @@ namespace BEKStudio
 
 
 
-public void UndoTurnButton()
+/*public void UndoTurnButton()
 {
     // Safety check
     if (gameState == GameState.MOVING || gameState == GameState.FINISHED)
@@ -230,8 +232,38 @@ public void UndoTurnButton()
        AdsManager.Instance.ShowRewardedAd();
       //  });
     }
-}
+}*/
 
+public void UndoTurnButton()
+{
+    // Safety check
+    if (gameState == GameState.MOVING || gameState == GameState.FINISHED)
+        return;
+
+    // 0 = abhi tak free undo use nahi hua
+    // 1 = already use ho chuka hai
+    int freeUsed = PlayerPrefs.GetInt("FreeUndoUsed", 0);
+
+    if (freeUsed == 0)
+    {
+        //  First and ONLY free undo in whole game lifetime
+        PlayerPrefs.SetInt("FreeUndoUsed", 1);
+        PlayerPrefs.Save();
+
+        UpdateUndoButtonUI();
+        GiveTurnBack();
+    }
+    else
+    {
+        // Turn ko wait pe daal do taaki timer na chale
+          gameState = GameState.WAIT;
+          currentPawnController.StopAnimation();
+
+        //  Free already used → now must watch ad
+        AdsManager.Instance.pendingReward = AdsManager.RewardType.UndoTurn;
+        AdsManager.Instance.ShowRewardedAd();
+    }
+}
 
 
 
@@ -260,7 +292,9 @@ public void GiveTurnBack()
 // Ui Update karne ke liye he ye to khali button ke text aur image ko update karega free undo ya ad undo ke hisab se - 10-2-2026 me add kiya gya HE
 void UpdateUndoButtonUI()
 {
-    if (!freeUndoUsed)
+    int freeUsed = PlayerPrefs.GetInt("FreeUndoUsed", 0);
+    
+    if (freeUsed == 0)
     {
         undoSimpleimage.SetActive(true);
         undoAdImage.SetActive(false);
@@ -510,7 +544,7 @@ void UpdateUndoButtonUI()
             //  YAHAN Pe Glow Update Karne Ke Liye Code Add Kiya He 4-1-2026
                 UpdateGlow(currentPawnController);
                 //  YAHAN Pe Glow Update Karne Ke Liye Code Add Kiya He 4-1-2026
-                UpdateGlow(currentPawnController);
+                //UpdateGlow(currentPawnController);
 
             ChangeGameState(GameState.READY);
 
@@ -593,7 +627,9 @@ void StopPulse(GameObject obj)
             if (newState == GameState.FINISHED)
             {
 
-
+                  //  Prevent multiple calls
+             if (rewardGiven) return;
+                rewardGiven = true;       //11-2-2026
                 UpdateWinLoseMatch();
 
 
@@ -609,9 +645,19 @@ void StopPulse(GameObject obj)
                 {
                     int index = finishOrder.IndexOf(myPlayerColor);
                     int myRank = index + 1;
+                    int totalPlayers = finishOrder.Count;
+                    int reward = GetRankReward(totalPlayers, myRank);
+Debug.Log("FINISH ORDER: " + string.Join(",", finishOrder));
+    Debug.Log("MyColor=" + myPlayerColor + " Index=" + index + " Rank=" + myRank + " Reward=" + reward);
+    Debug.Log("Coins BEFORE=" + PlayerPrefs.GetInt("coin"));
 
-
-
+                     // Practice check (optional but recommended)
+            if (PlayerPrefs.GetInt("IsPractice", 0) == 0)
+            {
+                PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + reward);
+                PlayerPrefs.Save();
+            }
+ Debug.Log("Coins AFTER=" + PlayerPrefs.GetInt("coin"));
                     if (myRank == 1)
                     {
 
@@ -650,6 +696,21 @@ void StopPulse(GameObject obj)
                 FinishedShow();
             }
         }
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
 
         void UpdateWinLoseMatch()
         {
@@ -941,6 +1002,7 @@ void StopPulse(GameObject obj)
             {
                 pauseScreen.SetActive(false);
             }
+    Debug.Log("IsPractice in FinishedShow = " + PlayerPrefs.GetInt("IsPractice", 0));
 
             AudioController.Instance.PlayWinSound();
             List<GameObject> activePlayerForPanel = new List<GameObject>();
@@ -1025,44 +1087,102 @@ void StopPulse(GameObject obj)
             }
             else
             {
+              
+              
+              
                 //  Normal match me reward do
-                int winnerPrice = PlayerPrefs.GetInt("playerCount") * gamePrice;
+               /* int winnerPrice = PlayerPrefs.GetInt("playerCount") * gamePrice;
 
                 if (winnerColor == myPlayerColor)
                 {
                     PlayerPrefs.SetInt("coin", PlayerPrefs.GetInt("coin") + winnerPrice);
                     PlayerPrefs.Save();
-                }
-            }
+                }*/
 
-            for (int i = 0; i < activePlayerForPanel.Count; i++)
-            {
-                GameObject g = activePlayerForPanel[i];
-                Transform txt = g.transform.Find("Coin");
 
-                txt.GetComponent<TextMeshProUGUI>().text = gamePrice.ToString("###,###,###");
-
-                if (g == winnerObject)
-                {
-                    LeanTween.value(gamePrice, PlayerPrefs.GetInt("playerCount") * gamePrice, 2f).setOnUpdate((float var) =>
-                    {
-                        txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
-                    });
-                }
-                else
-                {
-                    LeanTween.value(gamePrice, 0, 2f).setOnUpdate((float var) =>
-                    {
-                        txt.GetComponent<TextMeshProUGUI>().text = var.ToString("###,###");
-                    }).setOnComplete(() =>
-                    {
-                        txt.GetComponent<TextMeshProUGUI>().text = "0";
-                    });
-                }
-            }
+                // Panel animation
+    LeanTween.scale(finishedPanel, Vector3.one, 0.2f).setEaseOutBack().setOnStart(() =>
+    {
+        for (int i = 0; i < activePlayerForPanel.Count; i++)
+        {
+            GameObject g = activePlayerForPanel[i];
+            LeanTween.alphaCanvas(g.GetComponent<CanvasGroup>(), 1, 0.5f).setDelay(i * 0.25f);
         }
+    });
+//
 
-//coin Ranking System Ke Liye 4-1-2026 new
+/*int myRank = finishOrder.IndexOf(myPlayerColor) + 1;
+int totalPlayers = finishOrder.Count;
+int myReward = GetRankReward(totalPlayers, myRank);
+
+// Sab panels ka Coin text clear karo
+foreach (Transform child in finishedPlayersParent)
+{
+    Transform coinTxt = child.Find("Coin");
+    if (coinTxt != null)
+        coinTxt.GetComponent<TextMeshProUGUI>().text = "0";
+}
+*/
+
+
+
+// ---- SHOW RANK + REWARD ON UI (DISPLAY ONLY) ----
+
+int totalPlayers = finishOrder.Count;
+
+// Helper: color -> finished panel item
+System.Func<string, GameObject> GetPanelByColor = (string c) =>
+{
+    if (c == "Green") return finishedPlayersParent.GetChild(0).gameObject;
+    if (c == "Blue")  return finishedPlayersParent.GetChild(1).gameObject;
+    if (c == "Yellow")return finishedPlayersParent.GetChild(2).gameObject;
+    if (c == "Red")   return finishedPlayersParent.GetChild(3).gameObject;
+    return null;
+};
+
+bool isPractice = PlayerPrefs.GetInt("IsPractice", 0) == 1; // Practice mode me reward 0 hona chahiye
+
+for (int i = 0; i < finishOrder.Count; i++)
+{
+    int rank = i + 1; // 1,2,3,4
+    //int reward = GetRankReward(totalPlayers, rank);
+
+    int reward = 0;
+ if (!isPractice)
+    {
+        reward = GetRankReward(totalPlayers, rank);
+    }
+
+
+    string color = finishOrder[i];
+    GameObject panel = GetPanelByColor(color);
+    if (panel == null) continue;
+
+    // Rank text (child named "Rank")
+    Transform rankTxtT = panel.transform.Find("Rank");
+    if (rankTxtT != null)
+    {
+        string suffix = (rank == 1) ? "st" : (rank == 2) ? "nd" : (rank == 3) ? "rd" : "th";
+        rankTxtT.GetComponent<TextMeshProUGUI>().text = rank.ToString() + suffix;
+    }
+
+    // Coin text (child named "Coin")
+    Transform coinTxtT = panel.transform.Find("Coin");
+    if (coinTxtT != null)
+    {
+        // Nice count-up animation
+        TextMeshProUGUI coinTxt = coinTxtT.GetComponent<TextMeshProUGUI>();
+        coinTxt.text = "0";
+        LeanTween.value(0, reward, 1.5f).setOnUpdate((float v) =>
+        {
+            coinTxt.text = Mathf.RoundToInt(v).ToString();
+        });
+    }
+}
+            }
+
+            }
+
 
 
 int GetRankReward(int totalPlayers, int rank) // rank: 1 = first, 2 = second...
@@ -1088,17 +1208,6 @@ int GetRankReward(int totalPlayers, int rank) // rank: 1 = first, 2 = second...
     return 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
         public void FinishedMenuBtn()
         {
             PlayerPrefs.DeleteKey("IsPractice"); // Clear practice flag on exit
@@ -1118,61 +1227,87 @@ int GetRankReward(int totalPlayers, int rank) // rank: 1 = first, 2 = second...
         {
             ForcePlayerWin(myPlayerColor);
         }
-        public void ForcePlayerWin(string color)
+
+public void ForcePlayerWin(string color)
+{
+    // Prevent double finish
+    if (gameState == GameState.FINISHED)
+        return;
+
+    // Collect all pawns of selected color
+    Pawn[] targetPawns = null;
+
+    switch (color)
+    {
+        case "Green":
+            targetPawns = greenPawns;
+            break;
+        case "Yellow":
+            targetPawns = yellowPawns;
+            break;
+        case "Blue":
+            targetPawns = bluePawns;
+            break;
+        case "Red":
+            targetPawns = redPawns;
+            break;
+        default:
+            Debug.LogError("Invalid color passed to ForcePlayerWin");
+            return;
+    }
+
+    foreach (Pawn p in targetPawns)
+    {
+        if (!p.isCollected)
         {
-            // Prevent double finish
-            if (gameState == GameState.FINISHED)
-                return;
-
-            // Collect all pawns of selected color
-            Pawn[] targetPawns = null;
-
-            switch (color)
-            {
-                case "Green":
-                    targetPawns = greenPawns;
-                    break;
-                case "Yellow":
-                    targetPawns = yellowPawns;
-                    break;
-                case "Blue":
-                    targetPawns = bluePawns;
-                    break;
-                case "Red":
-                    targetPawns = redPawns;
-                    break;
-                default:
-                    Debug.LogError("Invalid color passed to ForcePlayerWin");
-                    return;
-            }
-
-            foreach (Pawn p in targetPawns)
-            {
-                if (!p.isCollected)
-                {
-                    p.isCollected = true;
-                    p.inBase = false;
-                    p.gameObject.SetActive(false); // optional visual cleanup
-                }
-            }
-
-            // Update finish order correctly
-            if (!finishOrder.Contains(color))
-            {
-                finishOrder.Insert(0, color); // Winner always first
-            }
-
-            winnerColor = color;
-
-            // Sync winner in Photon
-            if (!isLocal && PhotonNetwork.IsMasterClient)
-            {
-                photonView.RPC("WinnerColorRPC", RpcTarget.OthersBuffered, color);
-            }
-
-            // End game
-            ChangeGameState(GameState.FINISHED);
+            p.isCollected = true;
+            p.inBase = false;
+            p.gameObject.SetActive(false); // optional visual cleanup
         }
+    }
+
+    // -------- FIX STARTS HERE --------
+
+    // Clear old finish order
+    finishOrder.Clear();
+
+    // Winner always first
+    finishOrder.Add(color);
+
+    // Add remaining active players after winner (any order is fine for testing)
+    foreach (PawnController pc in activePawnControllers)
+    {
+        if (pc.pawnColor != color)
+        {
+            finishOrder.Add(pc.pawnColor);
+        }
+    }
+
+    // -------- FIX ENDS HERE --------
+
+    winnerColor = color;
+
+    // Sync winner in Photon
+    if (!isLocal && PhotonNetwork.IsMasterClient)
+    {
+        photonView.RPC("WinnerColorRPC", RpcTarget.OthersBuffered, color);
+    }
+
+    // End game
+    ChangeGameState(GameState.FINISHED);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
      // New Method for Stacked Pawns - 31-1-2026 Ye system Pawns ko Stack hone par Alag se dikhayega - Jaha Jaha same tile par 2 ya usse jyada pawns honge waha waha ye method call hoga aur unko thoda adjust karke dikhayega taki pata chale ki 1 nahi balki 2 ya usse jyada pawns hai

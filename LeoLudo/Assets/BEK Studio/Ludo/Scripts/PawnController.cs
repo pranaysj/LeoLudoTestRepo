@@ -338,7 +338,7 @@ namespace BEKStudio
             int oldRand = 0;
             float t = 0;
 
-            while (t < 0.45f)
+            while (t < 1.2f) //Animation duration Time badha diya he 
             {
                 t += Time.deltaTime;
 
